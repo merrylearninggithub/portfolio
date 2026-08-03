@@ -1,0 +1,1103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f3f3f3;
+    font-family:'Inter',sans-serif;
+    color:#111;
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    background:white;
+    padding:40px 80px 80px;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:80px;
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    gap:40px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#111;
+    font-size:14px;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    opacity:.6;
+}
+
+/* ===========================
+   Home
+=========================== */
+
+.hero{
+    text-align:center;
+    max-width:1100px;
+    margin:0 auto 140px;
+    padding-top:50px;
+}
+
+.hero-title{
+    font-family:'Playfair Display', serif;
+    font-size:90px;
+    line-height:1;
+    margin-bottom:30px;
+}
+
+.hero-title span{
+    display:block;
+
+    opacity:0;
+    transform:translateY(24px);
+
+    animation:fadeUp .8s ease forwards;
+}
+
+.hero-title span{
+    display:block;
+
+    opacity:0;
+    transform:translateY(24px);
+
+    background:linear-gradient(
+        90deg,
+        #111 0%,
+        #111 40%,
+        #f2f2f2 50%,
+        #111 60%,
+        #111 100%
+    );
+
+    background-size:300% 100%;
+    background-position:200% 0;
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+
+    animation:
+        fadeUp .8s ease forwards,
+        shimmer 7s linear infinite;
+}
+
+.hero-title span:nth-child(1){
+    animation-delay:.15s,1.1s;
+}
+
+.hero-title span:nth-child(2){
+    animation-delay:.35s,1.3s;
+}
+
+.hero-title span:nth-child(3){
+    animation-delay:.55s,1.5s;
+}
+
+.hero p{
+    font-size:22px;
+    line-height:1.8;
+    color:#666;
+
+    max-width:850px;
+    margin:40px auto 0;
+}
+
+.section-label{
+    font-size:14px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#888;
+    margin-bottom:10px;
+    font-weight:500;
+}
+
+.featured-project{
+    max-width:980px;
+    margin:80px auto 0;
+}
+
+.featured-project h2{
+    font-family:'Inter', sans-serif;
+    font-size:56px;
+    margin-bottom:30px;
+}
+
+.project-image{
+    max-width:920px;
+    margin:0 auto;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.project-image img{
+    width:100%;
+    max-height:450px;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.project-image:hover img{
+    transform:scale(1.03);
+}
+
+.project-description{
+    margin-top:30px;
+    text-align:center;
+    font-size:18px;
+    color:#666;
+    max-width:760px;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:1.8;
+}
+
+button{
+    margin-top:25px;
+    padding:14px 28px;
+    border:1px solid #111;
+    border-radius:999px;
+    background:transparent;
+    color:#111;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:not(.metri-btn):not(.perennial-btn):not(.feedback-btn):hover{
+    background:#111;
+    color:#fff;
+}
+
+.featured-button{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.bottom-projects{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    margin-top:100px;
+}
+
+.card img{
+    width:100%;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-family:'Inter', sans-serif;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* ===========================
+   Resume
+=========================== */
+
+.resume-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:60px;
+}
+
+.resume-header h1{
+    font-family:'Inter',sans-serif;
+    font-size:56px;
+}
+
+.download-btn{
+    text-decoration:none;
+    color:#111;
+    border:1px solid #111;
+    padding:12px 24px;
+    border-radius:999px;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#111;
+    color:white;
+}
+
+.resume-section{
+    max-width:980px;
+  
+}
+
+.resume-section h2{
+    font-family:'Inter',sans-serif;
+    font-size:34px;
+    margin-bottom:30px;
+    padding-bottom:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.resume-item{
+    margin-bottom:40px;
+}
+
+.resume-item h3{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.resume-item span{
+    display:block;
+    color:#777;
+    margin-bottom:16px;
+}
+
+.resume-item p{
+    line-height:1.8;
+    margin-bottom:8px;
+    color:#444;
+}
+
+.resume-item ul{
+    padding-left:22px;
+}
+
+.resume-item li{
+    line-height:1.8;
+    margin-bottom:10px;
+    color:#444;
+}
+
+/* ===========================
+   Generic Pages
+=========================== */
+
+.page-title{
+    font-family:'Inter', sans-serif;
+    font-size:56px;
+    margin-bottom:40px;
+}
+
+.page-content{
+    max-width:900px;
+    margin:0 auto;
+    font-size:18px;
+    line-height:1.9;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.container{
+    padding:30px;
+}
+
+nav{
+    flex-direction:column;
+    gap:25px;
+}
+
+.nav-links{
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:54px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.bottom-projects{
+    grid-template-columns:1fr;
+}
+
+.resume-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.resume-header h1{
+    font-size:42px;
+}
+
+.resume-section h2{
+    font-size:28px;
+}
+
+}
+.resume-section p{
+    font-family:'Inter', sans-serif;
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:12px;
+}
+
+.resume-section strong{
+    font-weight:600;
+}
+/* ===========================
+   About
+=========================== */
+.about{
+    max-width:1300px;
+    min-height:calc(100vh - 140px);
+
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:480px 1fr;
+    gap:100px;
+
+    align-items:center;
+}
+
+
+.about-image{
+    width:100%;
+}
+
+.about-image img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    object-position:center;
+    border-radius:24px;
+    display:block;
+}
+
+.about-text{
+    max-width:700px;
+}
+
+.about-text h1{
+    font-family:'Inter', sans-serif;
+    font-size:72px;
+    font-weight:600;
+    line-height:1.1;
+    margin-bottom:40px;
+}
+
+.about-text p{
+    font-family:'Inter', sans-serif;
+    font-size:22px;
+    line-height:1.9;
+    color:#555;
+    margin-bottom:28px;
+}
+
+.about-text p:first-of-type{
+    font-size:28px;
+    font-weight:500;
+    color:#222;
+    margin-bottom:30px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:1000px){
+
+.about{
+    grid-template-columns:1fr;
+    gap:50px;
+    margin-top:10px;
+}
+
+.about-image{
+    max-width:420px;
+    margin:0 auto;
+}
+
+.about-image img{
+    height:520px;
+}
+
+.about-text{
+    max-width:100%;
+}
+
+.about-text h1{
+    font-size:52px;
+}
+
+.about-text p{
+    font-size:18px;
+}
+
+.about-text p:first-of-type{
+    font-size:24px;
+}
+
+}
+/* ===========================
+   Contact
+=========================== */
+
+.contact{
+    max-width:900px;
+    min-height:70vh;
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.contact-label{
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    color:#888;
+    margin-bottom:20px;
+}
+
+.contact h1{
+    font-family:'Inter', sans-serif;
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:30px;
+}
+
+.contact-description{
+    font-family:'Inter', sans-serif;
+    font-size:22px;
+    line-height:1.9;
+    color:#555;
+    max-width:650px;
+    margin-bottom:60px;
+}
+
+.contact-links{
+    display:flex;
+    gap:50px;
+    align-items:center;
+}
+
+.contact-links a{
+    font-family:'Inter', sans-serif;
+    font-size:20px;
+    color:#111;
+    text-decoration:none;
+    border-bottom:2px solid transparent;
+    padding-bottom:4px;
+    transition:0.3s;
+}
+
+.contact-links a:hover{
+    border-bottom:2px solid #111;
+}
+
+@media (max-width:900px){
+
+.contact{
+    min-height:auto;
+    margin:40px auto;
+}
+
+.contact h1{
+    font-size:48px;
+}
+
+.contact-description{
+    font-size:18px;
+}
+
+.contact-links{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+}/* ===================================
+   MetriLearn Case Study
+=================================== */
+
+.case-study{
+    max-width:1320px;
+    margin:0 auto;
+}
+
+.case-study section{
+    margin:120px 0;
+}
+
+.case-study h2{
+    font-family:'Inter', sans-serif;
+    font-size:48px;
+    margin-bottom:32px;
+}
+
+.section-intro{
+    width:100%;
+    font-size:20px;
+    line-height:1.9;
+    color:#666;
+    margin-bottom:60px;
+}
+
+/* ---------- Intro ---------- */
+
+.project-intro{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    margin:80px 0;
+}
+
+.intro-content{
+    max-width:620px;
+    margin:0;
+    padding-top:20px;
+    text-align:left;
+}
+
+
+.project-intro h1{
+    font-family:'Inter', sans-serif;
+    font-size:82px;
+    margin-bottom:36px;
+}
+
+.case-description{
+    font-size:20px;
+    line-height:1.9;
+    color:#555;
+    margin-top:24px;
+}
+
+.case-image{
+    display:flex;
+    justify-content:center;
+}
+
+.case-image img{
+    width:60%;
+    max-width:700px;
+    height:auto;
+}
+
+/* ---------- Overview ---------- */
+
+.project-overview{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:0;
+}
+
+.overview-card{
+    background:#fafafa;
+    padding:30px;
+    border-radius:18px;
+}
+
+.overview-card h3{
+    margin-bottom:18px;
+    font-size:16px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+
+
+/* ---------- Challenge ---------- */
+.challenge p{
+    font-size:20px;
+    line-height:1.8;
+    color:#555;
+    width:100%;
+    margin-bottom:24px;
+}
+
+.challenge-lead{
+    font-size:24px !important;
+    color:#111 !important;
+    font-weight:500;
+}
+
+/* ---------- Research ---------- */
+
+
+
+/* ---------- Insights ---------- */
+
+.insights{
+    display:grid;
+    gap:28px;
+}
+
+.insight{
+    background:#fafafa;
+    border-left:4px solid #111;
+    padding:30px 35px;
+    border-radius:12px;
+}
+
+.insight h3{
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.insight p{
+    color:#555;
+    line-height:1.8;
+}
+
+
+
+/* ---------- Final Solution ---------- */
+
+.solution-gallery{
+    display:grid;
+    gap:90px;
+}
+
+.solution-item img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    margin-bottom:28px;
+}
+
+.solution-item h3{
+    font-size:30px;
+    margin-bottom:16px;
+    font-family:'Inter', sans-serif;
+}
+
+.solution-item p{
+    max-width:760px;
+    color:#555;
+    line-height:1.9;
+    font-size:19px;
+}
+
+/* ---------- Testing ---------- */
+
+.testing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.testing-card{
+    background:#fafafa;
+    border-radius:18px;
+    padding:35px;
+}
+
+.testing-card h3{
+    margin-bottom:18px;
+}
+
+.testing-card strong{
+    display:block;
+    margin:22px 0 10px;
+}
+
+.testing-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+/* ---------- Reflection ---------- */
+
+.reflection-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.reflection-card{
+    background:#fafafa;
+    padding:35px;
+    border-radius:18px;
+}
+
+.reflection-card h3{
+    margin-bottom:18px;
+}
+
+.reflection-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:900px){
+
+.project-intro{
+    grid-template-columns:1fr;
+}
+
+.project-overview{
+    grid-template-columns:1fr 1fr;
+}
+
+.research-methods,
+.goal-cards,
+.testing-grid,
+.reflection-grid{
+    grid-template-columns:1fr;
+}
+
+.case-study h2{
+    font-size:38px;
+}
+
+.project-intro h1{
+    font-size:52px;
+}
+
+.section-intro,
+.project-description{
+    font-size:18px;
+}
+
+}
+.prototype-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 28px;
+
+    border:1px solid #111;
+    border-radius:999px;
+
+    color:#111;
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+.prototype-btn:hover{
+    background:#111;
+    color:white;
+}
+
+
+
+
+/* ===========================
+   Perennial Land
+=========================== */
+
+/* ---------- Research ---------- */
+
+.research{
+    margin:140px 0;
+}
+
+.research-methods{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin:60px 0;
+}
+
+.method-card{
+    background:#fafafa;
+    border-radius:18px;
+    padding:32px;
+}
+
+.method-card h3{
+    font-size:20px;
+    margin-bottom:16px;
+}
+
+.method-card p{
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.research-image-wrapper{
+    text-align:center;
+    margin:70px auto 40px;
+}
+
+.research-image{
+    width:85%;
+    max-width:950px;
+    border-radius:16px;
+    box-shadow:0 16px 40px rgba(0,0,0,.08);
+}
+
+.research-caption{
+    max-width:900px;
+    margin:30px auto 0;
+    font-size:18px;
+    line-height:1.8;
+    color:#666;
+}
+/* ---------- Design Images ---------- */
+
+.design-image-wrapper{
+    text-align:center;
+    margin:60px auto;
+}
+
+.design-image{
+    width:85%;
+    max-width:950px;
+    border-radius:18px;
+    box-shadow:0 16px 40px rgba(0,0,0,.08);
+}
+
+/* ---------- Perennial Challenge ---------- */
+
+.perennial-challenge{
+    margin:120px 0;
+}
+
+.perennial-challenge h2{
+    font-family:'Inter', sans-serif;
+    font-size:48px;
+    margin-bottom:30px;
+}
+
+.project-lead{
+    width:100%;
+    max-width:none;
+    font-size:28px;
+    line-height:1.7;
+    font-weight:500;
+    margin:30px 0;
+}
+
+.project-text{
+    width:100%;
+    max-width:none;
+    font-size:20px;
+    line-height:1.9;
+    color:#666;
+    margin:30px 0 60px;
+}
+
+/* ===========================
+   Design Carousel
+=========================== */
+
+.design-carousel{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    margin:50px auto 25px;
+}
+
+.carousel-image{
+    width:100%;
+    max-width:800px;
+    border-radius:18px;
+    box-shadow:0 16px 40px rgba(0,0,0,.08);
+    transition:opacity .3s ease;
+}
+
+.carousel-btn{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#f3f3f3;
+    color:#333;
+    font-size:24px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.25s ease;
+}
+
+.carousel-btn:hover{
+    background:#111;
+    color:#fff;
+}
+
+#carouselCaption{
+    max-width:800px;
+    margin:20px auto 40px;
+    text-align:center;
+    line-height:1.8;
+}
+
+/* ===========================
+   User Testing Video
+=========================== */
+
+.video-wrapper{
+    display:flex;
+    justify-content:center;
+    margin:50px auto;
+}
+
+.testing-video{
+    width:100%;
+    max-width:700px;
+    border-radius:18px;
+    box-shadow:0 16px 40px rgba(0,0,0,.08);
+}
+/* ===========================
+   AI Feedback Buddy Hero
+=========================== */
+.feedbackbuddy-image{
+    display:flex;
+    justify-content:center;
+    margin-top:60px;
+}
+
+.case-image img.feedbackbuddy-hero{
+    width:650px;
+    max-width:none;
+    height:auto;
+}
+
+/* ===========================
+   Homepage Project Hover
+=========================== */
+
+.project-card{
+    transition:transform .35s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card img{
+    transition:transform .4s ease;
+}
+
+.project-card:hover img{
+    transform:scale(1.03);
+}
+
+.project-card h3{
+    transition:.3s;
+}
+
+.project-card:hover h3{
+    opacity:.75;
+}
+
+.project-card button{
+    transition:.3s;
+}
+
+.project-card:hover button,
+.featured-project:hover button{
+    transform:translateY(-2px);
+}
+.project-card{
+    cursor:pointer;
+}
+
+
+/* ===========================
+   Homepage animation
+=========================== */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(24px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes shimmer{
+    from{
+        background-position:200% center;
+    }
+    to{
+        background-position:-200% center;
+    }
+}
+
+
+/* ===========================
+   button colors
+=========================== */
+
+.metri-btn{
+    background:#7C4DFF;
+    border-color:#7C4DFF;
+    color:#fff;
+}
+
+.metri-btn:hover{
+    background:#8E66FF;
+    border-color:#8E66FF;
+}
+.perennial-btn{
+    background:#4C6FA8;
+    border-color:#4C6FA8;
+    color:#fff;
+}
+
+.perennial-btn:hover{
+    background:#3F5F91;
+    border-color:#3F5F91;
+}
+
+.feedback-btn{
+    background:#A8CF5A;
+    border-color:#A8CF5A;
+    color:#111;
+}
+
+.feedback-btn:hover{
+    background:#B8DB72;
+    border-color:#B8DB72;
+}
