@@ -771,38 +771,88 @@ nav{
 }
 
 /* ---------- Mobile ---------- */
+@media (max-width:900px){
 
-@media(max-width:900px){
+.container{
+    padding:24px;
+}
 
 .project-intro{
     grid-template-columns:1fr;
+    gap:40px;
+}
+
+.intro-content{
+    max-width:100%;
+    padding-top:0;
+}
+
+.case-image{
+    order:-1;
+}
+
+.case-image img{
+    width:100%;
+    max-width:100%;
+}
+
+.case-image img.feedbackbuddy-hero{
+    width:100%;
+    max-width:420px;
+}
+
+.project-intro h1{
+    font-size:48px;
+}
+
+.case-description{
+    font-size:18px;
 }
 
 .project-overview{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
+}
+
+.overview-card{
+    padding:24px;
 }
 
 .research-methods,
-.goal-cards,
 .testing-grid,
 .reflection-grid{
     grid-template-columns:1fr;
 }
 
+.research-image,
+.design-image,
+.final-image,
+.carousel-image{
+    width:100%;
+}
+
 .case-study h2{
-    font-size:38px;
+    font-size:36px;
 }
 
-.project-intro h1{
-    font-size:52px;
+.project-lead,
+.challenge-lead{
+    font-size:22px !important;
 }
 
-.section-intro,
-.project-description{
+.project-text,
+.challenge p,
+.section-intro{
     font-size:18px;
 }
 
+.video-wrapper iframe,
+.testing-video{
+    width:100%;
 }
+
+}
+
+
 .prototype-btn{
     display:inline-block;
     margin-top:35px;
